@@ -29,16 +29,16 @@ const About = () => {
             <section className='capabilities'>
                 
                     <div className='mid-img-1 background-tint' >
-                        <h4 className='capabilities-title'>WEB DESIGN</h4>
+                        <h5 className='capabilities-title'>WEB DESIGN</h5>
                         <p className='capabilities-description'>DESIGN, UX/UI, REACT</p>
                     </div>
                     <div className='mid-img-2 background-tint'>
-                        <h3 className='skills'>CAPABILITIES</h3>
-                        <h4 className='capabilities-title'>FRONT END</h4>
+                        <h4 className='skills'>CAPABILITIES</h4>
+                        <h5 className='capabilities-title'>FRONT END</h5>
                         <p className='capabilities-description'>HTML, CSS, JS</p>
                     </div>
                     <div className='mid-img-3 background-tint'>
-                        <h4 className='capabilities-title'>BACK END</h4>
+                        <h5 className='capabilities-title'>BACK END</h5>
                         <p className='capabilities-description'>NODE, EXPRESS, SQL, MONGO, GRAPHQL</p>
                     </div>
             </section>
