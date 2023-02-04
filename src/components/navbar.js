@@ -6,7 +6,7 @@ const Navbar = ({view, setView}) => {
                 className="page-title"
                 onClick={() => setView('home')}
             >
-                RT
+                <span className="page-title-accent">//</span> RT
             </h1>
             <nav className="text-right">
                 <ul>

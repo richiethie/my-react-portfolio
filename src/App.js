@@ -8,6 +8,7 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 
 
+
 function App() {
   const [view, setView] = useState('home')
 
