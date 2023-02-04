@@ -5,6 +5,7 @@ import Contact from './pages/contact';
 import Projects from './pages/projects';
 import Resume from './pages/resume';
 import Navbar from './components/navbar';
+import Footer from './components/footer';
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
         setView={setView}   
       />
       {renderView()}
-      
+      <Footer />
 
     </>
   );

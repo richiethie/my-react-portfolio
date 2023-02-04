@@ -1,5 +1,4 @@
-
-
+import profilePic from '../assets/profile-pic.jpeg'
 
 const About = () => {
     return(
@@ -12,14 +11,14 @@ const About = () => {
                     Full Stack Software Developer.
                 </h3>
                 <div className="description">
-                    <p>I am a full stack software developer that has a passion for web design, game development and </p>
+                    <p>I am a full stack software developer that has a passion for web design, game development and learning new concepts that can develop my skills as a software engineer. I have honed my skills in React, Node.js, Axios, Express, Handlebars, SQL, Mongo, JavaScript, CSS, and HTML to develop meaningful server-side applications. I am able to collaborate and work with a team while solving problems in high-stress environments. Looking to bring my attention to detail and technical skills to a company to grow and become a valuable asset. </p>
                 </div>
-                <form action="mailto: richiethie@gmail.com">
+                {/* <form action="mailto: richiethie@gmail.com">
                     <input type="submit" value="Contact Me" />
-                </form>
+                </form> */}
             </div>  
             <div>
-                <img src="../assets/profile-pic.jpeg" className="profile-pic" />
+                <img src={profilePic} className="profile-pic" />
             </div>
         </section>
     )
