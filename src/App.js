@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Home from './pages/home'
+import Contact from './pages/contact';
+import Projects from './pages/projects';
+import Resume from './pages/resume';
+import Navbar from './components/navbar';
+
 
 function App() {
+  const [view, setView] = useState('home')
+
+  const renderView = () => {
+    if (view === 'home') {
+      return <Home />
+    } else if (view === 'projects') {
+      return <Projects />
+    } else if (view === 'contact') {
+      return <Contact />
+    } else if (view === 'resume') {
+      return <Resume />
+    } else {
+      return 'Page not found :('
+    }
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar
+        view={view}
+        setView={setView}   
+      />
+      {renderView()}
+      
+
+    </>
   );
 }
 
