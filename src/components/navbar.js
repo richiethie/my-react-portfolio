@@ -11,9 +11,12 @@ const Navbar = ({view, setView}) => {
             <nav className="text-right">
                 <ul>
                     <li> 
-                        <a href="https://github.com/richiethie" target="_blank" className="header-link" >
-                            Github
-                        </a>
+                        <a  
+                            className="header-link" 
+                            onClick={() => setView('projects')}
+                        >
+                            Projects
+                        </a> 
                     </li>
                     <li> 
                         <a 
@@ -27,14 +30,6 @@ const Navbar = ({view, setView}) => {
                             >
                             Resume
                         </a>  */}
-                    </li>
-                    <li> 
-                        <a  
-                            className="header-link" 
-                            onClick={() => setView('projects')}
-                        >
-                            Projects
-                        </a> 
                     </li>
                     <li>
                          <a 

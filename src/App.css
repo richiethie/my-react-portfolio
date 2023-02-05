@@ -100,6 +100,10 @@ li {
   padding: 10px;
 }
 
+.header-link:hover {
+  cursor: pointer;
+}
+
 a:hover {
   color: rgb(178, 121, 16);
 }
@@ -218,7 +222,7 @@ main {
 }
 
 .background-tint:hover {
-  background-color: rgba(5, 5, 5, 0.13);
+  background-color: rgba(5, 5, 5, 0.507);
   background-blend-mode: multiply;
   
 }
@@ -248,7 +252,7 @@ main {
 }
 
 .mid-img-2:hover {
-  color: rgb(197, 197, 197);
+  color: rgb(221, 221, 221);
   text-shadow: 4px 1px 6px rgb(0, 0, 0);
 }
 
@@ -262,7 +266,7 @@ main {
 }
 
 .mid-img-3:hover {
-  color: rgb(197, 197, 197);
+  color: rgb(221, 221, 221);
   text-shadow: 4px 1px 6px rgb(0, 0, 0);
 }
 
@@ -293,6 +297,68 @@ form:hover {
 input:hover {
   color: var(--white);
   border-color: var(--white);
+}
+
+.projectPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 900px;
+}
+
+.projectList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: white; */
+  flex-direction: column;
+}
+
+.projectImages {
+  width: 100%;
+  
+}
+
+.projectCardTitle {
+  position: absolute;
+  display: none;
+  color: var(--white);
+}
+
+.projectCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px black;
+  filter: brightness(90%);
+}
+
+.projectCard:hover {
+  cursor: pointer;
+  filter: brightness(40%);
+}
+
+
+/* ///// */
+
+.pageTitleContainer {
+  display: flex;
+
+}
+
+.projectPageTitle {
+  font-weight: bolder;
+  color: var(--orange);
+  border-bottom: solid 3px var(--orange);
 }
 
 .projects {
@@ -373,16 +439,38 @@ input:hover {
   transform: scale(1.2);
 }
 
+.footerIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 200px;
+}
+
+.footerLink {
+  color: rgb(201, 201, 201);
+}
+
+.bi-envelope:hover {
+  cursor: pointer;
+  color: rgb(178, 121, 16);
+}
+
 footer {
-  background-color: var(--gray);
-  height: 80px;
+  /* background-color: var(--gray); */
+  height: 100px;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: var(--white);
   margin-top: 150px;
 }
+
+.footerText {
+  font-size: 15px;
+}
+
 footer, p {
   text-shadow: 10px;
 }

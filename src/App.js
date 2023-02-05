@@ -34,7 +34,10 @@ function App() {
         setView={setView}   
       />
       {renderView()}
-      <Footer />
+      <Footer
+        view={view}
+        setView={setView} 
+      />
 
     </>
   );
