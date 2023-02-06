@@ -42,6 +42,23 @@
   100% {transform: rotate(0deg);}
 }
 
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 710px;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: hsl(0, 0%, 80%);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
 header {
   display: flex;
   width: 100%;
@@ -309,6 +326,7 @@ input:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-top: 100px;
   width: 900px;
 }
 
@@ -321,14 +339,9 @@ input:hover {
 }
 
 .projectImages {
-  width: 100%;
+  width: 900px;
+  height: 500px;
   
-}
-
-.projectCardTitle {
-  position: absolute;
-  display: none;
-  color: var(--white);
 }
 
 .projectCard {
@@ -338,17 +351,125 @@ input:hover {
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20px;
-  box-shadow: 0px 0px 10px black;
-  filter: brightness(90%);
-}
-
-.projectCard:hover {
-  cursor: pointer;
-  filter: brightness(40%);
+  filter: brightness(85%);
 }
 
 
 /* ///// */
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 900px;
+  height: 500px;
+  perspective: 2000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateX(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-image: url('./assets/project-images/project-background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  transform: rotateX(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ///// */
+.projectLink {
+  color: white;
+  text-decoration: none;
+}
+
+.projectCardTitle {
+  font-family: 'Bebas Neue', cursive;
+  text-shadow: 1px 1px 3px black;
+  font-size: 80px;
+}
+
+.projectCardTitle2 {
+  font-family: 'Bebas Neue', cursive;
+  text-shadow: 1px 1px 3px black;
+  font-size: 80px;
+}
+
+.projectCardTitle3 {
+  font-family: 'Bebas Neue', cursive;
+  text-shadow: 1px 1px 3px black;
+  font-size: 80px;
+}
+
+.projectCardTitle4 {
+  font-family: 'Bebas Neue', cursive;
+  text-shadow: 1px 1px 3px black;
+  font-size: 80px;
+}
+
+
+.projectCard:hover .projectCardTitle {
+  overflow: hidden;
+  border-right: 2px solid hsl(0, 0%, 80%);
+  white-space: nowrap;
+  animation: typewriter 1.6s steps(20) .35s .25 normal both,
+    blinkTextCursor 500ms infinite;
+}
+
+.projectCard:hover .projectCardTitle2 {
+  overflow: hidden;
+  border-right: 2px solid hsl(0, 0%, 80%);
+  white-space: nowrap;
+  animation: typewriter 1.6s steps(30) .4s .58 normal both,
+    blinkTextCursor 500ms infinite;
+}
+
+.projectCard:hover .projectCardTitle3 {
+  overflow: hidden;
+  border-right: 2px solid hsl(0, 0%, 80%);
+  white-space: nowrap;
+  animation: typewriter 1.6s steps(30) .35s .78 normal both,
+    blinkTextCursor 500ms infinite;
+}
+
+.projectCard:hover .projectCardTitle4 {
+  overflow: hidden;
+  border-right: 2px solid hsl(0, 0%, 80%);
+  white-space: nowrap;
+  animation: typewriter 1.6s steps(25) .4s .81 normal both,
+    blinkTextCursor 500ms infinite;
+}
 
 .pageTitleContainer {
   display: flex;
@@ -356,88 +477,13 @@ input:hover {
 }
 
 .projectPageTitle {
-  font-weight: bolder;
+  font-family: 'Bebas Neue', cursive;
   color: var(--orange);
-  border-bottom: solid 3px var(--orange);
+  text-shadow: 1px 1px 3px black;
+  /* border-bottom: solid 3px var(--orange); */
 }
 
-.projects {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  height: 100px;
-}
 
-.project-title {
-  font-size: 48px;
-  color: var(--white);
-  text-decoration: underline;
-}
-
-.display-project {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2%;
-
-}
-
-.project-column { 
-  display: flex;
-  margin-bottom: 50px;
-  border-radius: 30px;
-  padding: 15px;
-  justify-content: center;
-  
-  height: 500px;
-  width: 31%;
-  background-color: var(--gray);
-}
-
-.project-card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.card-header {
-  display: flex;
-  font-size: 36px;
-  justify-content: center;
-  color: var(--orange);
-  height: 40px;
-  width: 100%;
-}
-
-.card-link {
-  display: flex;
-  text-decoration: none;
-  color: var(--orange);
-  font-size: 36px;
-}
-
-.card-text {
-  display: flex;
-  text-align: center;
-  margin: 15px;
-  color: var(--white);
-
-}
-
-.card-image {
-  display: flex;
-  justify-content: center;
-  width: 90%;
-  margin: 0px 30px;
-  border-radius: 30px;
-  border: solid 2px;
-  border-color: var(--orange);
-}
-
-.card-image:hover {
-  transform: scale(1.2);
-}
 
 .footerIcons {
   display: flex;
