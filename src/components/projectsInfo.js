@@ -17,7 +17,7 @@ const ProjectInfo = () => {
         <div className="projectPage">
             <div className="projectContainer">
                 <div className="pageTitleContainer">
-                    <h4 className="projectPageTitle">Featured Projects</h4>
+                    <h4 className="projectPageTitle">My Projects</h4>
                 </div>
                 <div className="projectList">
                     <div className="flip-card projectCard">
