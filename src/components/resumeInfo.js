@@ -9,11 +9,11 @@ const ResumeInfo = () => {
                         target="_blank" 
                         className="resumeLink">
                             My Resume 
-                            <i className="bi bi-file-person-fill">
-                            </i>
                     </a>
+                    <i className="bi bi-file-person-fill">
+                    </i>
                 </p>
-                <p></p>
+                <p className='resumeDescription'>Some of my skills as a developer include Web Design, Front end development using HTML, CSS, JS and React, and also Back end using Node.js, Express.js, SQL, Mongo, and GraphQL. </p>
                 <Capabilities />
             </div>
         </div>
