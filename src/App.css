@@ -18,6 +18,7 @@
   box-sizing: border-box;
 }
 
+
 @-webkit-keyframes wiggle {
   0% {-webkit-transform: rotate(10deg);}
   25% {-webkit-transform: rotate(-10deg);}
@@ -153,7 +154,33 @@ main {
   align-items: center;
   width: 85%;
   height: 650px;
-  margin: 200px 200px 450px;
+  margin: 200px 200px 150px;
+  
+}
+.scroll {
+  margin-bottom: 100px;
+  margin-left: 20px;
+}
+
+.scrollText {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.shimmer {
+
+  color:white;
+  
+  background: #acacac -webkit-gradient(linear, 100% 0, 0 0, from(#818181), color-stop(0.5, #e7e7e7), to(#8a8a8a));
+  
+  background-position: -4rem top; /*50px*/
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation-name: shimmer;
+  -webkit-animation-duration: 2.2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-background-size: 4rem 100%; /*50px*/
   
 }
 
@@ -197,6 +224,7 @@ main {
   width: 100%;
   height: 600px;
   color: rgb(138, 138, 138);
+  margin-bottom: 200px;
 }
 
 .capabilities-title {
@@ -371,7 +399,8 @@ main {
 
 /* Style the back side */
 .flip-card-back {
-  background-image: url('./assets/project-images/project-background.jpg');
+  /* background-image: url('./assets/project-images/project-background.jpg'); */
+  background-color: rgb(19, 19, 19);
   background-size: cover;
   background-position: center;
   color: white;
@@ -383,6 +412,43 @@ main {
 }
 
 /* ///// */
+.featuredSection {
+  display: flex;
+  margin-top: 120px;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+
+.featuredProjectList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.featureTitle {
+  margin-left: 10px;
+}
+
+.featuredContainer {
+  display: flex;
+  justify-content: center;
+  width: 1400px;
+}
+
+.featuredProjectImages {
+  width: 680px;
+  height: 360px;
+}
+
+.featuredProjectCard {
+  margin: 10px 10px 10px 10px;
+  height: 360px;
+  filter: brightness(80%);
+}
+
 .projectLink {
   color: white;
   text-decoration: none;
@@ -438,6 +504,38 @@ main {
 }
 
 .projectCard:hover .projectCardTitle4 {
+  overflow: hidden;
+  border-right: 2px solid hsl(0, 0%, 80%);
+  white-space: nowrap;
+  animation: typewriter 1.6s steps(25) .4s .81 normal both,
+    blinkTextCursor 500ms infinite;
+}
+
+.featuredProjectCard:hover .projectCardTitle {
+  overflow: hidden;
+  border-right: 2px solid hsl(0, 0%, 80%);
+  white-space: nowrap;
+  animation: typewriter 1.6s steps(20) .35s .25 normal both,
+    blinkTextCursor 500ms infinite;
+}
+
+.featuredProjectCard:hover .projectCardTitle2 {
+  overflow: hidden;
+  border-right: 2px solid hsl(0, 0%, 80%);
+  white-space: nowrap;
+  animation: typewriter 1.6s steps(30) .4s .58 normal both,
+    blinkTextCursor 500ms infinite;
+}
+
+.featuredProjectCard:hover .projectCardTitle3 {
+  overflow: hidden;
+  border-right: 2px solid hsl(0, 0%, 80%);
+  white-space: nowrap;
+  animation: typewriter 1.6s steps(30) .35s .78 normal both,
+    blinkTextCursor 500ms infinite;
+}
+
+.featuredProjectCard:hover .projectCardTitle4 {
   overflow: hidden;
   border-right: 2px solid hsl(0, 0%, 80%);
   white-space: nowrap;
@@ -604,6 +702,10 @@ footer, p {
   * {
       font-size: 18px;
   }
+
+  #root {
+    width: 100%;
+  }
   li {
       padding: 3px;
   }
@@ -636,5 +738,239 @@ footer, p {
   }
   .card-image {
       margin: 5px 0 0 15px;
+  }
+
+  .view-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .about-me {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-header {
+    text-align: center;
+  }
+
+  .description {
+    padding-right: 0px;
+  }
+  
+  .scroll {
+    display: none;
+  }
+
+  p {
+    text-align: center;
+    
+  }
+
+  .capabilities {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 600px;
+    color: rgb(138, 138, 138);
+    margin-bottom: 100px;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 180px;
+    perspective: 2000px; /* Remove this if you don't want the 3D effect */
+  }
+
+  .projectImages {
+    width: 350px;
+    height: 180px;
+  }
+
+  .featuredContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .featuredSection {
+    display: flex;
+    margin-top: 120px;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 200px;
+  }
+  
+  .featuredProjectList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .featureTitle {
+    margin-left: 10px;
+  }
+
+  .title-head {
+    margin-left: 30px;
+  }
+  
+  .featuredProjectImages {
+    width: 350px;
+    height: 180px;
+  }
+  
+  .featuredProjectCard {
+    margin: 10px 10px 10px 10px;
+    filter: brightness(80%);
+  }
+
+  .projectCardTitle {
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: 1px 1px 3px black;
+    font-size: 40px;
+  }
+  
+  .projectCardTitle2 {
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: 1px 1px 3px black;
+    font-size: 40px;
+  }
+  
+  .projectCardTitle3 {
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: 1px 1px 3px black;
+    font-size: 40px;
+  }
+  
+  .projectCardTitle4 {
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: 1px 1px 3px black;
+    font-size: 40px;
+  }
+
+  .about-info-container{
+    width: 100%;
+  }
+
+  .projectCard:hover .projectCardTitle {
+    overflow: hidden;
+    border-right: 2px solid hsl(0, 0%, 80%);
+    white-space: nowrap;
+    animation: typewriter 1.8s steps(30) .35s .15 normal both,
+      blinkTextCursor 500ms infinite;
+  }
+  
+  .projectCard:hover .projectCardTitle2 {
+    overflow: hidden;
+    border-right: 2px solid hsl(0, 0%, 80%);
+    white-space: nowrap;
+    animation: typewriter 1.6s steps(30) .4s .30 normal both,
+      blinkTextCursor 500ms infinite;
+  }
+  
+  .projectCard:hover .projectCardTitle3 {
+    overflow: hidden;
+    border-right: 2px solid hsl(0, 0%, 80%);
+    white-space: nowrap;
+    animation: typewriter 1.6s steps(30) .35s .42 normal both,
+      blinkTextCursor 500ms infinite;
+  }
+  
+  .projectCard:hover .projectCardTitle4 {
+    overflow: hidden;
+    border-right: 2px solid hsl(0, 0%, 80%);
+    white-space: nowrap;
+    animation: typewriter 1.6s steps(25) .4s .42 normal both,
+      blinkTextCursor 500ms infinite;
+  }
+  
+  .featuredProjectCard:hover .projectCardTitle {
+    overflow: hidden;
+    border-right: 2px solid hsl(0, 0%, 80%);
+    white-space: nowrap;
+    animation: typewriter 1.8s steps(30) .35s .15 normal both,
+      blinkTextCursor 500ms infinite;
+  }
+  
+  .featuredProjectCard:hover .projectCardTitle2 {
+    overflow: hidden;
+    border-right: 2px solid hsl(0, 0%, 80%);
+    white-space: nowrap;
+    animation: typewriter 1.6s steps(30) .4s .30 normal both,
+      blinkTextCursor 500ms infinite;
+  }
+  
+  .featuredProjectCard:hover .projectCardTitle3 {
+    overflow: hidden;
+    border-right: 2px solid hsl(0, 0%, 80%);
+    white-space: nowrap;
+    animation: typewriter 1.6s steps(30) .35s .42 normal both,
+      blinkTextCursor 500ms infinite;
+  }
+  
+  .featuredProjectCard:hover .projectCardTitle4 {
+    overflow: hidden;
+    border-right: 2px solid hsl(0, 0%, 80%);
+    white-space: nowrap;
+    animation: typewriter 1.6s steps(25) .4s .42 normal both,
+      blinkTextCursor 500ms infinite;
+  }
+
+  .contactTitle {
+    color: var(--orange);
+    font-family: 'Bebas Neue', cursive;
+  }
+  
+  .contactForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+  }
+  
+  .contactInputContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  
+  .inputTitle {
+    color: var(--white);
+    font-family: 'Bebas Neue', cursive;
+  }
+  
+  .contactInput {
+    background-color: var(--white);
+    border-radius: 5px;
+    border: solid 1px rgb(37, 37, 37);
+  }
+  
+  .commentInput {
+    height: 200px;
+  }
+  
+  .submitButton {
+    background-color: transparent;
+    border: 2px solid var(--orange);
+    color: var(--orange);
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 30px;
+  }
+  
+  .submitButton:hover {
+    border: 2px solid rgb(129, 34, 0);
+    color: rgb(129, 34, 0);
   }
 }

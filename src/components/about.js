@@ -3,11 +3,40 @@ import profilePic from '../assets/profile-pic.jpeg'
 import serverPic from '../assets/server.jpg'
 import frontEnd from '../assets/front-end.webp'
 import webDesign from '../assets/web-design.jpg'
+import FeaturedProjects from './featuredProjects'
+
+// let constrain = 150;
+// let mouseOverContainer = document.getElementById("ex1");
+// let ex1Layer = document.getElementById("ex1-layer");
+
+// function transforms(x, y, el) {
+//   let box = el.getBoundingClientRect();
+//   let calcX = -(y - box.y - (box.height / 2)) / constrain;
+//   let calcY = (x - box.x - (box.width / 2)) / constrain;
+  
+//   return "perspective(100px) "
+//     + "   rotateX("+ calcX +"deg) "
+//     + "   rotateY("+ calcY +"deg) ";
+// };
+
+// function transformElement(el, xyEl) {
+//   el.style.transform  = transforms.apply(null, xyEl);
+// }
+
+// mouseOverContainer.onmousemove = function(e) {
+//   let xy = [e.clientX, e.clientY];
+//   let position = xy.concat([ex1Layer]);
+
+//   window.requestAnimationFrame(function(){
+//     transformElement(ex1Layer, position);
+//   });
+// };
+
 
 const About = () => {
     return(
-        <div className='about-info-container'>
-            <section className="welcome">
+        <div id="ex1" className='about-info-container'>
+            <section  className="welcome">
                 <div className="about-me">
                     <h2 className="body-title">
                         Richie Thiesfeldt.
@@ -22,12 +51,16 @@ const About = () => {
                         <input type="submit" value="Contact Me" />
                     </form> */}
                 </div>  
-                <div className='profile-pic-container'>
-                    <img src={profilePic} className="profile-pic side-a" />
+                <div id="ex1-layer" className='profile-pic-container'>
+                    <img  src={profilePic} className="profile-pic side-a" />
                     <div className="side-b"></div>
                 </div>
             </section>
-            <Capabilities />        
+            <div className='scroll'>
+                <p className='scrollText shimmer'>scroll↓</p>
+            </div>
+            <Capabilities />   
+            <FeaturedProjects />     
         </div>
     )
 }
