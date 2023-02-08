@@ -1020,6 +1020,12 @@ footer, p {
     height: 36px;
   }
 
+  .resumeDescription {
+    padding: 30px;
+    color: var(--white);
+    margin-left: 0px;
+  }
+
   .capabilitiesContainer {
     display: flex;
     padding-top: 100px;
