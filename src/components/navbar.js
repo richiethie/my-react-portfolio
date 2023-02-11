@@ -1,13 +1,14 @@
+import logo from '../assets/my-rt-logo.png'
 
 const Navbar = ({view, setView}) => {
     return (
-        <header>
-            <h1 
+        <header className='header-outer'>
+            <div 
                 className="page-title"
                 onClick={() => setView('home')}
             >
-                <span className="page-title-accent">//</span> RT
-            </h1>
+                <img className='logo' src={logo}/>
+            </div>
             <nav className="text-right">
                 <ul>
                     <li> 
@@ -32,15 +33,15 @@ const Navbar = ({view, setView}) => {
                         </a>  */}
                     </li>
                     <li>
-                         <a 
+                        <a 
                             className="header-link"
                             onClick={() => setView('contact')}
-                         >
+                        >
                             Contact
                         </a> 
                     </li>
                 </ul>
-            </nav>
+                </nav>
         </header>
     )
 }

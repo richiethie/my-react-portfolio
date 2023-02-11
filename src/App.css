@@ -1,8 +1,18 @@
 :root {
+  --black: rgb(17, 17, 24); 
   --darkBlue: rgb(24, 24, 34);
   --white: rgb(199, 199, 199);
   --orange: #f35840;
   --gray: gray;
+  --opaque: linear-gradient(90deg, rgba(41, 27, 235, 0.678) 0%, rgba(3, 150, 143, 0.747) 61%, rgba(0, 153, 33, 0.863) 100%);
+  --gradient: linear-gradient(90deg, rgb(41, 27, 235) 0%, rgb(3, 150, 142) 61%, rgb(0, 153, 33) 100%);
+  --title: 'League Spartan', sans-serif;
+  --text: 'Roboto Mono', monospace;
+  --header-outer-height: 120px;
+  --header-inner-height: 90px;
+  --header-height-difference: calc(
+    var(--header-outer-height) - var(--header-inner-height)
+  );
 }
 
 * {
@@ -60,10 +70,28 @@
   }
 }
 
+@-webkit-keyframes slide {
+  100% { left: 0; }
+}
+
+@keyframes slide {
+  100% { left: 0; }
+}
+
 header {
   display: flex;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 120px;
+  height: 70px;
+  background: none;
+  background-color: transparent;
+}
+
+.logo {
+  height: 90px;
+  margin-top: 10px;
 }
 
 .page-title {
@@ -113,7 +141,7 @@ li {
 }
 
 .header-link {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--title);
   text-shadow: 1px 1px 3px black;
   text-decoration: none;
   color: var(--white);
@@ -129,7 +157,7 @@ a:hover {
 }
 
 body {
-  background-color: var(--darkBlue);
+  background-color: var(--black);
 }
 
 main {
@@ -151,7 +179,12 @@ main {
 .bottom-shadow {
   display: flex;
   position: relative;
-  z-index: 5;
+  justify-content: center;
+  z-index: 2;
+  background-image: url(./assets/project-images/blue-pixels_cropped.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   /* box-shadow: 0px 0px 75px 10px black; */
 }
 
@@ -159,42 +192,17 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  height: 80%;
   align-items: center;
-  width: 85%;
-  height: 650px;
-  margin: 200px 200px 200px;
-  
-}
-.scroll {
-  margin-bottom: 100px;
-  margin-left: 20px;
-}
-
-.scrollText {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-}
-
-.shimmer {
-
-  color:white;
-  
-  background: #acacac -webkit-gradient(linear, 100% 0, 0 0, from(#818181), color-stop(0.5, #e7e7e7), to(#8a8a8a));
-  
-  background-position: -4rem top; /*50px*/
-  background-repeat: no-repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-animation-name: shimmer;
-  -webkit-animation-duration: 2.2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-background-size: 4rem 100%; /*50px*/
+  width: 60%;
+  margin: 200px 200px 450px;
   
 }
 
 .about-me {
   display: flex;
   flex-direction: column;
+  z-index: 2;
   margin: 80px 0px 80px;
   padding: 15px;
   color: var(--gray);
@@ -203,22 +211,19 @@ main {
   
 }
 
-.profile-pic {
-  max-height: 400px;
-  border-radius: 500px;
-  border: solid 4px;
-  border-color: var(--orange);
-}
-
 .body-title {
   color: var(--white);
-  font-size: 48px;
+  font-family: var(--title);
+  font-size: 56px;
 
 }
 
 .text-header {
-  font-size: 36px;
-  color: var(--orange);
+  font-size: 28px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--title);
 }
 
 .description {
@@ -226,123 +231,40 @@ main {
   padding-right: 50px;
 }
 
-.capabilitiesContainer {
-  display: flex;
+.descriptionText {
+  font-family: var(--text);
+}
+
+.logo-container {
   position: relative;
-  z-index: 4;
-  width: 100%;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-color: var(--white);
-  box-shadow: inset 0px 12px 10px -6px rgb(0, 0, 0), inset 0px -12px 10px -6px rgb(0, 0, 0);
 }
-
-.capabilities {
-  display: flex;
-  flex-direction: row;
-  box-shadow: 0px 0px  25px 8px black;
-  width: 100%;
-  height: 600px;
-  color: rgb(138, 138, 138);
-}
-
-.capabilities-title {
-  display: flex;
-  justify-content: center;
-  font-family: 'Bebas Neue', cursive;
-  align-items: flex-end;
-  margin-bottom: 20px;
-  color: rgb(224, 224, 224);
-}
-
-.skills {
-  font-family: 'Bebas Neue', cursive;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin: 200px 0px 375px 0px;
-  color: rgb(224, 224, 224);
-}
-
-.capabilities-description {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin-bottom: 35px;
-  font-size: 15px;
-}
-
-.mid-imgs {
-  height: 600px;
-  width: 33.33%;
-  background-color: blue;
-  object-fit: fill;
-}
-
-.background-tint {
-  background-color: rgba(5, 5, 5, 0.671);
-  background-blend-mode: multiply;
-  justify-content: end;
-  flex-direction: column;
-  font-weight: bolder;
-}
-
-.background-tint:hover {
-  background-color: rgba(5, 5, 5, 0.507);
-  background-blend-mode: multiply;
-  
-}
-
-.mid-img-1 {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  background-image: url("./assets/web-design.jpg");
-  background-size: cover;
-  background-position: -300px;
-}
-
-.mid-img-1:hover {
-  color: rgb(221, 221, 221);
-  text-shadow: 4px 1px 6px rgb(0, 0, 0);
-}
-
-.mid-img-2 {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  background-image: url("./assets/front-end.webp");
-  background-blend-mode: multiply;
-  background-size: cover;
-  background-position: -50px;
-}
-
-.mid-img-2:hover {
-  color: rgb(221, 221, 221);
-  text-shadow: 4px 1px 6px rgb(0, 0, 0);
-}
-
-.mid-img-3 {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  background-image: url("./assets/server.jpg");
-  background-size: cover;
-
-}
-
-.mid-img-3:hover {
-  color: rgb(221, 221, 221);
-  text-shadow: 4px 1px 6px rgb(0, 0, 0);
-}
-
 
 .projectPage {
   display: flex;
   position: relative;
-  z-index: 5;
+  z-index: 6;
   justify-content: center;
   align-items: center;
+  background: var(--gradient);
+}
+
+.projectPageFiller {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--darkBlue);
+
+}
+
+.featuredSection {
+  display: flex;
+  margin-top: 200px;
+  flex-direction: column;
+  width: 60%;
+  justify-content: center;
+  margin-bottom: 300px;
 }
 
 .projectContainer {
@@ -357,7 +279,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: white; */
   flex-direction: column;
 }
 
@@ -377,71 +298,6 @@ main {
   filter: brightness(85%);
 }
 
-
-/* ///// */
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  background-color: transparent;
-  width: 900px;
-  height: 500px;
-  perspective: 2000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateX(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flip-card-back {
-  /* background-image: url('./assets/project-images/project-background.jpg'); */
-  background-color: rgb(19, 19, 19);
-  background-size: cover;
-  background-position: center;
-  color: white;
-  transform: rotateX(180deg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-/* ///// */
-.featuredSection {
-  display: flex;
-  margin-top: 300px;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 300px;
-}
-
-
 .featuredProjectList {
   display: flex;
   flex-direction: column;
@@ -452,6 +308,7 @@ main {
 
 .featureTitle {
   margin-left: 10px;
+  margin-bottom: 300px;
 }
 
 .featuredContainer {
@@ -460,121 +317,332 @@ main {
   width: 1400px;
 }
 
-.featuredProjectImages {
-  width: 680px;
-  height: 360px;
+.featuredProjectImagesLeft {
+  display: flex;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: end;
+  z-index: 1;
+  margin-top: 80px;
+  margin-left: 100px;
+  background-color: var(--darkBlue);
+  position: relative;
+  overflow: hidden;
+  /* box-shadow: 0px 0px 15px black; */
+}
+
+.slide-left {
+  position: absolute;
+  left: -960px;
+  bottom: 0px;
+  width: 960px;
+  height: 540px;
+  background: var(--opaque);
+}
+
+.featuredProjectImagesLeft:hover .slide-left {
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+}
+
+.featuredProjectImagesRight {
+  display: flex;
+  padding-bottom: 80px;
+  padding-left: 120px;
+  padding-right: 80px;
+  flex-direction: column;
+  justify-content: end;
+  z-index: 1;
+  margin-bottom: 80px;
+  margin-right: 100px;
+  background-color: var(--darkBlue);
+  position: relative;
+  overflow: hidden;
+  /* box-shadow: 0px 0px 15px black; */
+}
+
+.slide-right {
+  position: absolute;
+  left: -960px;
+  bottom: 0px;
+  width: 960px;
+  height: 540px;
+  background: var(--opaque);
+}
+
+.featuredProjectImagesRight:hover .slide-right {
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+}
+
+.filter {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 960px;
+  height: 540px;
+  background: rgba(0, 0, 0, 0.596);
+}
+
+
+.box {
+  position: absolute;
+  background: var(--gradient);
+  width: 960px;
+  height: 540px;
+}
+
+.box-right {
+  position: absolute;
+  background: var(--gradient);
+  width: 960px;
+  height: 540px;
+}
+
+.box-fill-left {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 950px;
+  height: 530px;
+  background-color: var(--darkBlue);
+}
+
+.box-fill-right {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 950px;
+  height: 530px;
+  background-color: var(--darkBlue);
 }
 
 .featuredProjectCard {
-  margin: 10px 10px 10px 10px;
+  margin: 10px 10px 500px 10px;
   height: 360px;
   filter: brightness(80%);
 }
 
-.projectLink {
+.projectContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectCardContents {
+  position: relative;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.projectTitle {
+  font-family: var(--title);
+  font-size: 80px;
   color: white;
+}
+
+.projectDescription {
+  font-family: var(--text);
+  color: white;
+  text-shadow: 0px 0px 5px black;
+  font-weight: bold;
+}
+
+#text-right {
+  text-align: end;
+}
+
+#we-do {
+  background-image: url(./assets/project-images/we-do.JPG);
+  background-size: cover;
+  
+}
+
+#mood-for-food {
+  background-image: url(./assets/project-images/mood-for-food.JPG);
+  background-size: cover;
+}
+
+#weather-dashboard {
+  background-image: url(./assets/project-images/weather-dashboard.JPG);
+  background-size: cover;
+}
+
+#work-day-scheduler {
+  background-image: url(./assets/project-images/work-day-scheduler.JPG);
+  background-size: cover;
+}
+
+.card-left {
+  margin-right: 250px;
+  position: relative;
+}
+
+.card-right {
+  margin-left: 250px;
+  position: relative;
+}
+
+.projectLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
+  font-family: var(--title);
+  color: white;
+  
 }
 
-.projectCardTitle {
-  font-family: 'Bebas Neue', cursive;
-  text-shadow: 1px 1px 3px black;
-  font-size: 80px;
+.projectLinkBG {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: var(--gradient);
+  width: 160px;
+  height: 60px;
+  border-radius: 5px;
 }
 
-.projectCardTitle2 {
-  font-family: 'Bebas Neue', cursive;
-  text-shadow: 1px 1px 3px black;
-  font-size: 80px;
+.projectLinkBG:hover {
+  cursor: pointer;
 }
 
-.projectCardTitle3 {
-  font-family: 'Bebas Neue', cursive;
-  text-shadow: 1px 1px 3px black;
-  font-size: 80px;
-}
-
-.projectCardTitle4 {
-  font-family: 'Bebas Neue', cursive;
-  text-shadow: 1px 1px 3px black;
-  font-size: 80px;
-}
-
-
-.projectCard:hover .projectCardTitle {
-  overflow: hidden;
-  border-right: 2px solid hsl(0, 0%, 80%);
-  white-space: nowrap;
-  animation: typewriter 1.6s steps(20) .35s .25 normal both,
-    blinkTextCursor 500ms infinite;
-}
-
-.projectCard:hover .projectCardTitle2 {
-  overflow: hidden;
-  border-right: 2px solid hsl(0, 0%, 80%);
-  white-space: nowrap;
-  animation: typewriter 1.6s steps(30) .4s .58 normal both,
-    blinkTextCursor 500ms infinite;
-}
-
-.projectCard:hover .projectCardTitle3 {
-  overflow: hidden;
-  border-right: 2px solid hsl(0, 0%, 80%);
-  white-space: nowrap;
-  animation: typewriter 1.6s steps(30) .35s .78 normal both,
-    blinkTextCursor 500ms infinite;
-}
-
-.projectCard:hover .projectCardTitle4 {
-  overflow: hidden;
-  border-right: 2px solid hsl(0, 0%, 80%);
-  white-space: nowrap;
-  animation: typewriter 1.6s steps(25) .4s .81 normal both,
-    blinkTextCursor 500ms infinite;
-}
-
-.featuredProjectCard:hover .projectCardTitle {
-  overflow: hidden;
-  border-right: 2px solid hsl(0, 0%, 80%);
-  white-space: nowrap;
-  animation: typewriter 1.6s steps(20) .35s .25 normal both,
-    blinkTextCursor 500ms infinite;
-}
-
-.featuredProjectCard:hover .projectCardTitle2 {
-  overflow: hidden;
-  border-right: 2px solid hsl(0, 0%, 80%);
-  white-space: nowrap;
-  animation: typewriter 1.6s steps(30) .4s .58 normal both,
-    blinkTextCursor 500ms infinite;
-}
-
-.featuredProjectCard:hover .projectCardTitle3 {
-  overflow: hidden;
-  border-right: 2px solid hsl(0, 0%, 80%);
-  white-space: nowrap;
-  animation: typewriter 1.6s steps(30) .35s .78 normal both,
-    blinkTextCursor 500ms infinite;
-}
-
-.featuredProjectCard:hover .projectCardTitle4 {
-  overflow: hidden;
-  border-right: 2px solid hsl(0, 0%, 80%);
-  white-space: nowrap;
-  animation: typewriter 1.6s steps(25) .4s .81 normal both,
-    blinkTextCursor 500ms infinite;
-}
 
 .pageTitleContainer {
   display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 
 }
 
 .projectPageTitle {
-  font-family: 'Bebas Neue', cursive;
-  color: var(--orange);
-  text-shadow: 1px 1px 3px black;
+  font-family: var(--title);
+  font-size: 60px;
+  font-weight: bolder;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   /* border-bottom: solid 3px var(--orange); */
+}
+
+.aboutMe {
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  width: 100%;
+}
+
+.aboutMeContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  flex-direction: column;
+}
+
+.aboutMeBackground {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./assets/green-pixels.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.aboutMeHeader {
+  display: flex;
+  justify-content: center;
+  margin-right: 100px;
+  margin-top: 100px;
+}
+
+.profilePicContainer {
+  position: relative;
+  display: flex;
+  height: 500px;
+  margin-left: 100px;
+  transform: rotate(10deg);
+}
+
+.profile-pic {
+  max-height: 400px;
+  position: absolute;
+  z-index: 3;
+
+}
+
+.profile-pic-bg {
+  position: absolute;
+  left: -190px;
+  bottom: 120px;
+  height: 400px;
+  width: 400px;
+  margin-left: 200px;
+  background: var(--gradient);
+}
+
+.profile-pic-bg-filler {
+  position: absolute;
+  height: 390px;
+  width: 390px;
+  margin-top: 5px;
+  margin-left: 5px;
+  background: var(--black);
+}
+
+.aboutMeHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 200px;
+  width: 60%;
+}
+
+.aboutMeTitle {
+  font-family: var(--title);
+  font-size: 100px;
+  margin-right: 150px;
+  color: var(--white);
+  transform: rotate(-5deg);
+}
+
+.aboutMeDescriptionContainer {
+  width: 50%;
+  margin-bottom: 150px;
+}
+
+.name {
+  font-family: var(--title);
+  font-size: 50px;
+  color: var(--white);
+  margin-bottom: 50px;
+}
+
+.gradient {
+  font-family: var(--title);
+  font-size: 50px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--title);
+}
+
+.aboutMeText {
+  font-family: var(--text);
+  color: var(--white);
 }
 
 .resumePageContainer {
@@ -840,12 +908,7 @@ footer, p {
     width: 350px;
     height: 180px;
   } */
-  .flip-card {
-    background-color: transparent;
-    width: 680px;
-    height: 360px;
-    perspective: 2000px; /* Remove this if you don't want the 3D effect */
-  }
+
   
   .featuredProjectCard {
     margin: 10px 10px 10px 10px;
@@ -1042,12 +1105,7 @@ footer, p {
     margin-bottom: 100px;
   }
 
-  .flip-card {
-    background-color: transparent;
-    width: 350px;
-    height: 180px;
-    perspective: 2000px; /* Remove this if you don't want the 3D effect */
-  }
+
 
   .projectImages {
     width: 350px;

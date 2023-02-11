@@ -1,9 +1,11 @@
 import Capabilities from './capabilities'
+import AboutMe from './aboutMe'
 import profilePic from '../assets/profile-pic.jpeg'
 import serverPic from '../assets/server.jpg'
 import frontEnd from '../assets/front-end.webp'
 import webDesign from '../assets/web-design.jpg'
 import FeaturedProjects from './featuredProjects'
+import logo from '../assets/my-rt-logo.png'
 
 // let constrain = 150;
 // let mouseOverContainer = document.getElementById("ex1");
@@ -40,20 +42,25 @@ const About = () => {
                 <section  className="welcome">
                     <div className="about-me">
                         <h2 className="body-title">
-                            Richie Thiesfeldt.
+                            Richie Thiesfeldt
                         </h2>
                         <h3 className="text-header">
-                            Full Stack Software Developer.
+                            Full Stack Software Developer
                         </h3>
                         <div className="description">
-                            <p>I am a full stack software developer that has a passion for web design, game development, and learning new concepts that can develop my skills as a software engineer. I am able to collaborate and work with a team while solving problems in high-stress environments. Looking to bring my attention to detail and technical skills to a company to grow and become a valuable asset. </p>
+                            <div className='projectLinkBG'>
+                                <a className='projectLink'>
+                                    About Me
+                                </a>
+                            </div>
+                            {/* <p className='descriptionText'>I am a full stack software developer that has a passion for web design, game development, and learning new concepts that can develop my skills as a software engineer. I am able to collaborate and work with a team while solving problems in high-stress environments. Looking to bring my attention to detail and technical skills to a company to grow and become a valuable asset. </p> */}
                         </div>
                         {/* <form action="mailto: richiethie@gmail.com">
                             <input type="submit" value="Contact Me" />
                         </form> */}
                     </div>  
-                    <div id="ex1-layer" className='profile-pic-container'>
-                        <img  src={profilePic} className="profile-pic side-a" />
+                    <div id="ex1-layer" className='logo-container'>
+                        <img  src={logo} className="body-logo" />
                         <div className="side-b"></div>
                     </div>
                 </section>
@@ -61,8 +68,9 @@ const About = () => {
             {/* <div className='scroll'>
                 <p className='scrollText shimmer'>scroll↓</p>
             </div> */}
-            <Capabilities />   
             <FeaturedProjects />     
+            <AboutMe />
+            <Capabilities />   
         </div>
     )
 }
