@@ -19,7 +19,7 @@ const FeaturedProjects = () => {
                                     <div id='we-do' className='box featuredProjectImagesLeft'>
                                         <div className='slide-left'></div>
                                         <div className='filter'></div>
-                                        <div className='projectCardContents'>
+                                        <div id='cardStartLeft' className='projectCardContents'>
                                             <h4 className='projectTitle'>We Do</h4>
                                             <p className='projectDescription'>Find the right activity for you with We Do</p>
                                             <div className='projectLinkBG'>
@@ -65,7 +65,7 @@ const FeaturedProjects = () => {
                                     <div id='weather-dashboard' className='box featuredProjectImagesLeft'>
                                         <div className='slide-left'></div>
                                         <div className='filter'></div>
-                                        <div className='projectCardContents'>
+                                        <div id='cardStartLeft' className='projectCardContents'>
                                             <h4 className='projectTitle'>Weather Dashboard</h4>
                                             <p className='projectDescription'>Search a city and check the 5 day forecast</p>
                                             <div className='projectLinkBG'>
@@ -90,7 +90,7 @@ const FeaturedProjects = () => {
                                         <div className='filter'></div>
                                         <div className='projectCardContents'>
                                             <h4 className='projectTitle'>We Do</h4>
-                                            <p className='projectDescription'>Find the right activity for you with We Do</p>
+                                            <p id='text-right' className='projectDescription'>Find the right activity for you with We Do</p>
                                             <div className='projectLinkBG'>
                                                 <a className='projectLink'>
                                                     Check it out
