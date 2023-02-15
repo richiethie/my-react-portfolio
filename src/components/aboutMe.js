@@ -2,7 +2,7 @@ import profilePic from '../assets/profile-pic.jpeg'
 
 const AboutMe = () => {
     return (
-        <div className='aboutMe'>
+        <div id='about-me' className='aboutMe'>
             <div className='aboutMeContainer'>
                 <div className='aboutMeBackground'>
                     <div className='aboutMeHeader'>

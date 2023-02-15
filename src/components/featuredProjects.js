@@ -22,9 +22,16 @@ const FeaturedProjects = () => {
                                         <div id='cardStartLeft' className='projectCardContents'>
                                             <h4 className='projectTitle'>We Do</h4>
                                             <p className='projectDescription'>Find the right activity for you with We Do</p>
-                                            <div className='projectLinkBG'>
-                                                <a className='projectLink'>
-                                                    Check it out
+                                            <div className='linksContainer'>
+                                                <a href="https://github.com/ddwk21/we-do" target="_blank" className="footerLink" >
+                                                    <i id='project-github' className="bi bi-github bi-2x"></i>
+                                                </a>
+                                                <a href='https://we-do-application.herokuapp.com/login' target="_blank" className='linkHover'>
+                                                    <div className='projectLinkBG'>
+                                                        <a className='projectLink'>
+                                                            Check it out
+                                                        </a>
+                                                    </div>
                                                 </a>
                                             </div>
                                         </div>
@@ -44,9 +51,16 @@ const FeaturedProjects = () => {
                                         <div className='projectCardContents'>
                                             <h4 className='projectTitle'>Mood for Food</h4>
                                             <p id='text-right' className='projectDescription'>Find your horoscope for the day and get recommended food based on your mood</p>
-                                            <div className='projectLinkBG'>
-                                                <a className='projectLink'>
-                                                    Check it out
+                                            <div className='linksContainer'>
+                                                <a href="https://github.com/kevinkraiss/mood-for-food" target="_blank" className="footerLink" >
+                                                    <i id='project-github' className="bi bi-github bi-2x"></i>
+                                                </a>
+                                                <a href='https://kevinkraiss.github.io/mood-for-food/' target="_blank" className='linkHover'>
+                                                    <div className='projectLinkBG'>
+                                                        <a className='projectLink'>
+                                                            Check it out
+                                                        </a>
+                                                    </div>
                                                 </a>
                                             </div>
                                         </div>
@@ -68,9 +82,16 @@ const FeaturedProjects = () => {
                                         <div id='cardStartLeft' className='projectCardContents'>
                                             <h4 className='projectTitle'>Weather Dashboard</h4>
                                             <p className='projectDescription'>Search a city and check the 5 day forecast</p>
-                                            <div className='projectLinkBG'>
-                                                <a className='projectLink'>
-                                                    Check it out
+                                            <div className='linksContainer'>
+                                                <a href="https://github.com/richiethie/weather-dashboard" target="_blank" className="footerLink" >
+                                                    <i id='project-github' className="bi bi-github bi-2x"></i>
+                                                </a>
+                                                <a href='https://richiethie.github.io/weather-dashboard/' target="_blank" className='linkHover'>
+                                                    <div className='projectLinkBG'>
+                                                        <a className='projectLink'>
+                                                            Check it out
+                                                        </a>
+                                                    </div>
                                                 </a>
                                             </div>
                                         </div>
@@ -89,11 +110,18 @@ const FeaturedProjects = () => {
                                         <div className='slide-right'></div>
                                         <div className='filter'></div>
                                         <div className='projectCardContents'>
-                                            <h4 className='projectTitle'>We Do</h4>
-                                            <p id='text-right' className='projectDescription'>Find the right activity for you with We Do</p>
-                                            <div className='projectLinkBG'>
-                                                <a className='projectLink'>
-                                                    Check it out
+                                            <h4 className='projectTitle'>Work Day Scheduler</h4>
+                                            <p id='text-right' className='projectDescription'>Manage your time throughout the workday</p>
+                                            <div className='linksContainer'>
+                                                <a href="https://github.com/richiethie/work-day-scheduler-05" target="_blank" className="footerLink" >
+                                                    <i id='project-github' className="bi bi-github bi-2x"></i>
+                                                </a>
+                                                <a href='https://richiethie.github.io/work-day-scheduler-05/' target="_blank" className='linkHover'>
+                                                    <div className='projectLinkBG'>
+                                                        <a className='projectLink'>
+                                                            Check it out
+                                                        </a>
+                                                    </div>
                                                 </a>
                                             </div>
                                         </div>

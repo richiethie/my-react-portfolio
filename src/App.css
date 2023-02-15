@@ -152,7 +152,19 @@ li {
   padding: 10px;
 }
 
+.header-link2 {
+  font-family: var(--title);
+  text-shadow: 1px 1px 3px black;
+  text-decoration: none;
+  color: rgb(27, 17, 170);
+  padding: 10px;
+}
+
 .header-link:hover {
+  cursor: pointer;
+}
+
+.header-link2:hover {
   cursor: pointer;
 }
 
@@ -243,6 +255,110 @@ main {
   position: relative;
 }
 
+.capabilitiesContainer {
+  display: flex;
+  width: 100%;
+}
+
+.capabilities {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 600px;
+  color: rgb(138, 138, 138);
+  margin-bottom: 200px;
+}
+
+.capabilities-title {
+  display: flex;
+  justify-content: center;
+  font-family: var(--title);
+  align-items: flex-end;
+  margin-bottom: 20px;
+  color: rgb(224, 224, 224);
+}
+
+.skills {
+  font-family: var(--title);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 200px 0px 375px 0px;
+  color: rgb(224, 224, 224);
+}
+
+.capabilities-description {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 35px;
+  font-size: 15px;
+}
+
+.mid-imgs {
+  height: 600px;
+  width: 33.33%;
+  background-color: blue;
+  object-fit: fill;
+}
+
+.background-tint {
+  background-color: rgba(5, 5, 5, 0.671);
+  background-blend-mode: multiply;
+  justify-content: end;
+  flex-direction: column;
+  font-weight: bolder;
+}
+
+.background-tint:hover {
+  background-color: rgba(5, 5, 5, 0.507);
+  background-blend-mode: multiply;
+  
+}
+
+.mid-img-1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-image: url("./assets/web-design.jpg");
+  background-size: cover;
+  background-position: -300px;
+}
+
+.mid-img-1:hover {
+  color: rgb(221, 221, 221);
+  text-shadow: 4px 1px 6px rgb(0, 0, 0);
+}
+
+.mid-img-2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-image: url("./assets/front-end.webp");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: -50px;
+}
+
+.mid-img-2:hover {
+  color: rgb(221, 221, 221);
+  text-shadow: 4px 1px 6px rgb(0, 0, 0);
+}
+
+.mid-img-3 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-image: url("./assets/server.jpg");
+  background-size: cover;
+
+}
+
+.mid-img-3:hover {
+  color: rgb(221, 221, 221);
+  text-shadow: 4px 1px 6px rgb(0, 0, 0);
+}
+
 .projectPage {
   display: flex;
   position: relative;
@@ -259,6 +375,16 @@ main {
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: var(--darkBlue);
+
+}
+
+.projectPageFiller2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  background-color: var(--black);
 
 }
 
@@ -460,6 +586,25 @@ main {
   font-weight: bold;
 }
 
+.linksContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkHover {
+  text-decoration: none;
+}
+
+.linkHover:hover .projectLink {
+  color: #00fff2c5;
+}
+
+#project-github {
+  font-size: 60px;
+  margin-right: 25px;
+}
+
 #text-right {
   text-align: end;
 }
@@ -633,6 +778,7 @@ main {
   font-size: 50px;
   color: var(--white);
   margin-bottom: 50px;
+  text-shadow: 1px 1px 2px black;
 }
 
 .gradient {
@@ -642,11 +788,13 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: var(--title);
+  text-shadow: none;
 }
 
 .aboutMeText {
   font-family: var(--text);
   color: var(--white);
+  text-shadow: 1px 1px 2px black;
 }
 
 .resumePageContainer {
@@ -661,7 +809,7 @@ main {
   align-items: center;
   flex-direction: row;
   color: var(--white);
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--text);
   margin-left: 100px;
 }
 
@@ -671,7 +819,7 @@ main {
   align-items: center;
   color: var(--white);
   text-decoration: none;
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--title);
   font-size: 36px;
 }
 
@@ -713,12 +861,14 @@ main {
 
 .bi-envelope:hover {
   cursor: pointer;
-  color: #f35840c5;
+  color: #00fff2c5;
 }
 
 .contactTitle {
-  color: var(--orange);
-  font-family: 'Bebas Neue', cursive;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--title)
 }
 
 .contactForm {
@@ -739,7 +889,12 @@ main {
 
 .inputTitle {
   color: var(--white);
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--title)
+}
+
+#errorMessage {
+  margin-top: 50px;
+  color: rgb(116, 2, 2);
 }
 
 .contactInput {
@@ -754,8 +909,9 @@ main {
 
 .submitButton {
   background-color: transparent;
-  border: 2px solid var(--orange);
-  color: var(--orange);
+  border: 2px solid rgb(41, 27, 235);
+  color: rgb(41, 27, 235);
+  font-family: var(--title);
   width: 150px;
   height: 50px;
   border-radius: 5px;
@@ -763,8 +919,8 @@ main {
 }
 
 .submitButton:hover {
-  border: 2px solid rgb(129, 34, 0);
-  color: rgb(129, 34, 0);
+  border: 2px solid rgb(3, 150, 142);
+  color: rgb(3, 150, 142);
 }
 
 footer {
@@ -823,9 +979,6 @@ footer, p {
   .capabilitiesContainer {
     display: flex;
     width: 100%;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-color: var(--white);
   }
 
   .capabilities {
@@ -838,7 +991,18 @@ footer, p {
       font-size: 18px;
   }
 
+  html,
+  body{
+  width:100%;
+  overflow-x:hidden;
+  }
+
   #root {
+    width: 100%;
+  }
+
+  .view-container {
+    display: flex;
     width: 100%;
   }
 
@@ -887,7 +1051,7 @@ footer, p {
     background-color: var(--black);
   }
   .nav-item {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     margin-left: 40px;
   }
 
@@ -896,19 +1060,47 @@ footer, p {
     font-size: 80px;
   }
 
+  .about-info-container {
+    width: 100%;
+  }
+
+  .bottom-shadow {
+    width: 100%;
+  }
+
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+    width: 100%;
+    margin: 0px 0px 50px;
+}
+
   .about-me {
     width: 100%;
     justify-content: center;
-    margin-left: 50px;
+    
+    margin-left: 100px;
+  }
+
+  .aboutMeBackground {
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   .aboutMeHeader {
-    margin-left: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 160px;
   }
 
   .profilePicContainer {
     height: 200px;
     margin-left: 0px;
+    margin-right: 10px;
   }
   
   .profile-pic {
@@ -943,6 +1135,16 @@ footer, p {
     font-size: 30px;
   }
 /* 32040080*/
+
+  .capabilities {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 600px;
+    color: rgb(138, 138, 138);
+    margin-bottom: 100px;
+  }
+
   .featuredContainer {
     display: flex;
     justify-content: center;
@@ -1025,7 +1227,7 @@ footer, p {
   }
 
   .projectTitle {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .featureTitle {
@@ -1040,6 +1242,11 @@ footer, p {
 
   .projectDescription {
     font-size: 12px;
+    margin-bottom: 0px ;
+  }
+
+  #project-github {
+    font-size: 40px;
   }
 
   .projectLinkBG {
@@ -1060,10 +1267,6 @@ footer, p {
     flex-direction: column;
     justify-content: end;
     align-items: flex-end;
-  }
-
-  .projectLink {
-
   }
 
   .projectContainer {
@@ -1113,7 +1316,7 @@ footer, p {
   }
 
   .card-left {
-    margin-right: 0px;
+    margin-right: 25px;
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -1134,6 +1337,20 @@ footer, p {
 
   .aboutMeDescriptionContainer {
     width: 60%;
+  }
+
+  .contactForm {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .resumeDescription {
+    margin-left: 0px;
+    text-align: center;
+  }
+  
+  footer {
+    margin-top: 50px;
   }
   
 }

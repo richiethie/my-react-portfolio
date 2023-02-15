@@ -1,11 +1,23 @@
+import { useState } from "react"
+import '../App.css'
 import logo from '../assets/my-rt-logo.png'
 
+
 const Navbar = ({view, setView}) => {
+    const [projects, setProjects] = useState('header-link')
+    const [resume, setResume] = useState('header-link')
+    const [contact, setContact] = useState('header-link')
+
     return (
         <header className='header-outer'>
             <div 
                 className="page-title"
-                onClick={() => setView('home')}
+                onClick={() => {
+                    setView('home')
+                    setProjects('header-link')
+                    setResume('header-link')
+                    setContact('header-link')
+                }}
             >
                 <img className='logo' src={logo}/>
             </div>
@@ -41,29 +53,44 @@ const Navbar = ({view, setView}) => {
                 <ul className='desktopNav'>
                     <li> 
                         <a  
-                            className="header-link" 
-                            onClick={() => setView('projects')}
+                            className={projects} 
+                            onClick={() => {
+                                setView('projects')
+                                setProjects('header-link2')
+                                setResume('header-link')
+                                setContact('header-link')
+                            }}
                         >
                             Projects
                         </a> 
                     </li>
                     <li> 
                         <a 
-                            className="header-link"
-                            onClick={() => setView('resume')}
+                            className={resume}
+                            onClick={() => {
+                                setView('resume')
+                                setResume('header-link2')
+                                setProjects('header-link')
+                                setContact('header-link')
+                            }}
                         >
                             Resume
                         </a>
                         {/* <a href="https://docs.google.com/document/d/16u-dr_klaieE0MXW4yWEBs_BT5sip2-7XUtd1ce1sNY/edit#heading=h.5x0d5h95i329" 
-                            className="header-link" 
+                            className={style} 
                             >
                             Resume
                         </a>  */}
                     </li>
                     <li>
                         <a 
-                            className="header-link"
-                            onClick={() => setView('contact')}
+                            className={contact}
+                            onClick={() => {
+                                setView('contact')
+                                setContact('header-link2')
+                                setProjects('header-link')
+                                setResume('header-link')
+                            }}
                         >
                             Contact
                         </a> 
