@@ -48,13 +48,16 @@ const About = () => {
                             Full Stack Software Developer
                         </h3>
                         <div className="description">
-                            <a href='#about-me' className='linkHover'>
+                            <a href='#featured' className='welcome-link'>featured</a>
+                            <a href='#about-me' className='welcome-link'>about me</a>
+                            <a href='#links' className='welcome-link'>links</a>
+                            {/* <a href='#about-me' className='linkHover'>
                                 <div className='projectLinkBG'>
                                     <a className='projectLink'>
                                         About me
                                     </a>
                                 </div>
-                            </a>
+                            </a> */}
                             {/* <p className='descriptionText'>I am a full stack software developer that has a passion for web design, game development, and learning new concepts that can develop my skills as a software engineer. I am able to collaborate and work with a team while solving problems in high-stress environments. Looking to bring my attention to detail and technical skills to a company to grow and become a valuable asset. </p> */}
                         </div>
                         {/* <form action="mailto: richiethie@gmail.com">

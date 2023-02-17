@@ -1,6 +1,6 @@
 const Footer = ({view, setView}) => {
     return (
-        <footer>
+        <footer id="links">
             <div className="footerIcons" >
                 <i className="bi bi-envelope" onClick={() => setView('contact')}>
                 </i>

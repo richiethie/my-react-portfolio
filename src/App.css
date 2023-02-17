@@ -211,16 +211,20 @@ main {
   height: 80%;
   align-items: center;
   width: 60%;
-  margin: 200px 200px 450px;
+  margin: 200px 200px 300px;
   
 }
 
 .about-me {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  border-width: 6px;
+  border-style: solid;
+  border-image: linear-gradient(to right, rgb(41, 27, 235) 0%, rgb(0, 153, 33) 100%) 1;
   z-index: 2;
   margin: 80px 0px 80px;
-  padding: 15px;
+  padding: 65px;
   color: var(--gray);
   line-height: 70px;
 
@@ -230,21 +234,43 @@ main {
 .body-title {
   color: var(--white);
   font-family: var(--title);
-  font-size: 56px;
+  font-size: 100px;
+  margin-bottom: 30px;
+  /* text-shadow: 4px 1px 6px rgb(0, 0, 0); */
 
 }
 
+.body-logo {
+
+  z-index: 2;
+  margin-top: 120px;
+  margin-left: -450px;
+  filter: brightness(20%);
+  filter: opacity(10%);
+}
+
 .text-header {
-  font-size: 28px;
+  font-size: 50px;
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: var(--title);
+  margin-bottom: 30px;
 }
 
 .description {
   display: flex;
-  padding-right: 50px;
+  flex-direction: row;
+}
+
+.welcome-link {
+  font-family: var(--text);
+  text-decoration: none;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 30px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
 .descriptionText {
@@ -936,7 +962,8 @@ footer {
 }
 
 .footerText {
-  font-size: 15px;
+  font-size: 20px;
+  font-family: var(--title);
 }
 
 footer, p {
@@ -950,12 +977,22 @@ footer, p {
   .projects {
       padding: 10px;
   }
+
   .welcome {
       flex-direction: column;
       height: 1000px;
       width: 100%;
       margin: 10px 0px 120px;
   }
+
+  .body-logo {
+    display: none;
+  }
+
+  .about-me {
+    width: 70%;
+  }
+
   .card-image {
       margin-top: 5px;
   }
@@ -1057,7 +1094,7 @@ footer, p {
 
   .nav-link {
     font-family: var(--title);
-    font-size: 80px;
+    font-size: 60px;
   }
 
   .about-info-container {
@@ -1072,16 +1109,33 @@ footer, p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1000px;
+    height: 700px;
     width: 100%;
-    margin: 0px 0px 50px;
-}
+    margin: 0px 0px 0px;
+  }
 
   .about-me {
-    width: 100%;
-    justify-content: center;
-    
-    margin-left: 100px;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    padding: 0px;
+  }
+
+  .body-title {
+    font-size: 35px;
+    margin-top: 15px;
+  }
+
+  .text-header {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .welcome-link {
+    font-size: 15px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .aboutMeBackground {

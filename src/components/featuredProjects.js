@@ -5,7 +5,7 @@ import workDaySchedulerImage from '../assets/project-images/work-day-scheduler.J
 
 const FeaturedProjects = () => {
     return (
-        <div className="projectPage">
+        <div className="projectPage" id='featured'>
             <div className='projectPageFiller'>
                 <div className='featuredSection'>
                     <div className="pageTitleContainer">
