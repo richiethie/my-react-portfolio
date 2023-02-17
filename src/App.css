@@ -227,7 +227,6 @@ main {
   padding: 65px;
   color: var(--gray);
   line-height: 70px;
-
   
 }
 
@@ -1139,6 +1138,7 @@ footer, p {
   }
 
   .aboutMeBackground {
+    background-image: url(./assets/green-pixels.png);
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
