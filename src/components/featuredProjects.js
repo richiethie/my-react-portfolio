@@ -110,13 +110,13 @@ const FeaturedProjects = () => {
                                         <div className='slide-right'></div>
                                         <div className='filter'></div>
                                         <div className='projectCardContents'>
-                                            <h4 className='projectTitle'>Work Day Scheduler</h4>
-                                            <p id='text-right' className='projectDescription'>Manage your time throughout the workday</p>
+                                            <h4 className='projectTitle'>Encyclone</h4>
+                                            <p id='text-right' className='projectDescription'>MERN Stack Encyclopedia Brittanica</p>
                                             <div className='linksContainer'>
-                                                <a href="https://github.com/richiethie/work-day-scheduler-05" target="_blank" className="footerLink" >
+                                                <a href="https://github.com/ddwk21/cyclone" target="_blank" className="footerLink" >
                                                     <i id='project-github' className="bi bi-github bi-2x"></i>
                                                 </a>
-                                                <a href='https://richiethie.github.io/work-day-scheduler-05/' target="_blank" className='linkHover'>
+                                                <a href='https://fierce-sands-41595.herokuapp.com/' target="_blank" className='linkHover'>
                                                     <div className='projectLinkBG'>
                                                         <a className='projectLink'>
                                                             Check it out
